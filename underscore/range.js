@@ -1,9 +1,16 @@
 function rangeStartStopStep(start, stop, step){
   var arr = [];
-  for(i=start; i<stop; i=i+step){
-    arr.push(i);
+  if(arguments[2] < 0){
+    for(i=start; i>stop; i=i+step){
+      arr.push(i);
     }
-  return arr;
+    return arr;
+  } else{
+    for(i=start; i<stop; i=i+step){
+      arr.push(i);
+      }
+    return arr;
+  }
 }
 
 function rangeStartStop(start, stop){
