@@ -8,11 +8,11 @@ var jsc = require('jsverify'),
 [bubbleSort, mergeSort, insertionSort, insertionSort2]
   .forEach(function(sortFn) {
   describe(sortFn.name, function () {
-    jsc.property("correct", "array nat", function (arr) {
+    jsc.property("correct", "array integer", function (arr) {
       return _.isEqual(sortFn(arr).slice(), arr.sort(function(a, b){return a-b;}));
     });
 
-    jsc.property("idempotent", "array nat", function (arr) {
+    jsc.property("idempotent", "array integer", function (arr) {
       return _.isEqual(sortFn(sortFn(arr)).slice(), sortFn(arr));
     });
   });

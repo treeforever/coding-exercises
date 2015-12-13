@@ -21,7 +21,7 @@ function rangeStop(stop){
   return rangeStartStopStep(0, stop, 1);
 }
 
-function ultimateRange(){
+function range(){
   if(arguments.length === 3){
     return rangeStartStopStep(arguments[0], arguments[1], arguments[2]);
   } else if(arguments.length === 2){
@@ -31,8 +31,4 @@ function ultimateRange(){
   }
 }
 
-console.log(ultimateRange(4, -2, -1));
-
-module.exports = rangeStartStopStep;
-module.exports = rangeStartStop;
-module.exports = rangeStop;
+module.exports = range;
