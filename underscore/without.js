@@ -1,20 +1,47 @@
-function removeAll(arr, itemToRemove){
+function remove(arr, itemToRemove){
   function notEqualItem(value){
     return value !== itemToRemove;
   }
-  var filtered = arr.filter(notEqualItem);
-  return filtered;
+
+  var updatedArr = arr.filter(notEqualItem);
+  return updatedArr;
 }
+
 
 function without(){
   var originalArr = arguments[0];
-  var updatedArray = originalArr;
+  updatedArr = originalArr;
 
   for(i=1; i<arguments.length; i++){
-      var a  = arguments[i];
-      updatedArray = removeAll(updatedArray, a);
+    itemToRemove = arguments[i];
+    updatedArr = remove(updatedArr, itemToRemove);
   }
-  return updatedArray;
+  return updatedArr;
 }
 
-console.log(without([1, 2, 1, 0, 3, 1, 4], 0, 1));
+// console.log(without([1, 2, 1, 0, 3, 1, 4], 0, 1));
+
+//////////////////////////////////////////////////////////
+
+function reduceOneElement(updatedArr, elementToRemove){
+  var newArr = [];
+  for(j=0; j<updatedArr.length;j++){
+    if(updatedArr[j] !== elementToRemove){
+        newArr.push(updatedArr[j]);
+    }
+  }
+  return newArr;
+}
+
+function without2(){
+  var originalArr = arguments[0];
+  var updatedArr = originalArr;
+
+  for(i=1; i<arguments.length; i++){
+    var elementToRemove = arguments[i];
+    updatedArr = reduceOneElement(updatedArr, elementToRemove);
+  }
+  return updatedArr;
+}
+
+// console.log(without2([1, 2, 1, 0, 3, 1, 4],0,1));
