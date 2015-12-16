@@ -14,4 +14,4 @@ function rest (array, index){
   }
 }
 
-// console.log(rest([5,4,-3,2,1,7,2],6));
+module.exports = rest;

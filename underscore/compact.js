@@ -24,4 +24,4 @@ function compact(array){
   return updatedArr;
 }
 
-// console.log(compact([0, 1, false, 2, '', null, "chi", 3]));
+module.exports = compact;
