@@ -32,8 +32,4 @@ function ultimateRange(){
   }
 }
 
-console.log(ultimateRange(4, -2, -1));
-
-module.exports = rangeStartStopStep;
-module.exports = rangeStartStop;
-module.exports = rangeStop;
+module.exports = ultimateRange;
