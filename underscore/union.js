@@ -7,7 +7,8 @@ function addNewValue(arr, value){
 
 function union(){
   var firstArr = arguments[0];
-  updatedArr = firstArr;
+      updatedArr = firstArr;
+
   for(i=1; i<arguments.length;i++){
     for(j=0;j<arguments[i].length;j++){
       updatedArr = addNewValue(updatedArr, arguments[i][j]);
@@ -16,4 +17,4 @@ function union(){
   return updatedArr;
 }
 
-// console.log(union([1, 2, 3], [101, 2, 1, 10], [2, 1]));
+console.log(union());

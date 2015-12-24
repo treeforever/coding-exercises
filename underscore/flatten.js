@@ -30,15 +30,17 @@ function singleFlatten(item){
 }
 
 function flatten(item){
-  if(arguments.length === 2){
+  if(arguments[1] === true){
     return singleFlatten(item);
-  } else {
+  } else if (arguments[1] === false || arguments.length === 1) {
     return multipleFlatten(item);
+  } else{
+    throw "Not inplemented.";
   }
 }
 
 var a = [1, [2], [3, [[4]]]];
-console.log(flatten([[[1]]],true));
+console.log(flatten([[[1]]]));
 // console.log(a[2][1]);
 
 //
