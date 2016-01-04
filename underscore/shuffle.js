@@ -1,5 +1,5 @@
 // var testList = [12,34,51,4,7,-1,809,1111,22,45,6666,77,88,123,653,254,798];
-//     testList2 = [1,2,3,4,5,6,7,8,9,10,11,12];
+//     testList2 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
 function shuffle(list){
   if (arguments.length>0){
@@ -40,4 +40,38 @@ function shuffle2(list){
   }
 }
 
-// console.log(shuffle2(testList2));
+function remainderFormNewArr (position, arr){
+  var newArr = [];
+  for (i=0;i<position;i++){
+    newArr[i] = arr[i];
+  }
+
+  for (j=position+1;j<arr.length;j++){
+    newArr[j-1] = arr[j];
+  }
+
+  return newArr;
+}
+
+
+function shuffle3(list){
+  if (arguments.length>0){
+    var updatedList = list;
+        shuffledList = [];
+
+    for (a=0;a<list.length;a++){
+      var multiplier = updatedList.length;
+      randomPosition = Math.floor(Math.random() * multiplier);
+      shuffledList[a] = updatedList[randomPosition];
+      updatedList = remainderFormNewArr(randomPosition, updatedList);
+    }
+
+    return shuffledList;
+  } else {
+    return [];
+  }
+
+}
+
+
+// console.log(shuffle3(testList2));
