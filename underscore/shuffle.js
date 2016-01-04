@@ -1,5 +1,5 @@
-var testList = [12,34,51,4,7,-1,809,1111,22,45,6666,77,88,123,653,254,798];
-testList2 = [1,2,3,4,5,6,7,8,9,10,11,12];
+// var testList = [12,34,51,4,7,-1,809,1111,22,45,6666,77,88,123,653,254,798];
+//     testList2 = [1,2,3,4,5,6,7,8,9,10,11,12];
 
 function shuffle(list){
   if (arguments.length>0){
@@ -40,4 +40,4 @@ function shuffle2(list){
   }
 }
 
-console.log(shuffle2(testList2));
+// console.log(shuffle2(testList2));
