@@ -39,10 +39,11 @@ function flatten(item){
   }
 }
 
-var a = [1, [2], [3, [[4]]]];
-console.log(flatten([[[1]]]));
+// var a = [1, [2], [3, [[4]]]];
+// console.log(flatten([[[1]]]));
 // console.log(a[2][1]);
 
 //
 // var array = [1,2,3,4];
 // console.log(array.last());
+module.exports = flatten;

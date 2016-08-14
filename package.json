@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha $(find . -name '*.test.js')"
+    "test": "mocha $(find . -name '*.test.js')",
+    "dev": "mocha -w $(find . -name '*.test.js')"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "jsverify": "^0.7.1",
     "lodash": "^3.10.1",
-    "mocha": "^2.3.4"
+    "mocha": "^2.3.4",
+    "underscore": "^1.8.3"
   }
 }

@@ -17,4 +17,6 @@ function union(){
   return updatedArr;
 }
 
-console.log(union());
+// console.log(union());
+
+module.exports = union;

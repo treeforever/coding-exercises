@@ -44,4 +44,4 @@ function without2(){
   return updatedArr;
 }
 
-// console.log(without2([1, 2, 1, 0, 3, 1, 4],0,1));
+module.exports = without;
